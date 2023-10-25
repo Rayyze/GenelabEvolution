@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "genelabevolution",
+	"version": "${version}",
+	"name": "Genelab Evolution",
+	"description": "This is a mod that adds technologies about genetics",
+	"authors": [
+		"Rayyze"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC-BY-SA",
+	"icon": "assets/genelabevolution/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.rayyze.genelabevolution.GenelabEvolution"
+		],
+		"client": [
+			"dev.rayyze.genelabevolution.GenelabEvolutionClient"
+		],
+		"fabric-datagen": [
+			"dev.rayyze.genelabevolution.GenelabEvolutionDataGenerator"
+		]
+	},
+	"mixins": [
+		"genelabevolution.mixins.json",
+		{
+			"config": "genelabevolution.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.2",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
